@@ -13,5 +13,9 @@ Visual Studio 20**
 CashCrusaders.App -> Windows Forms Application  
 CashCrusaders.Domain -> Models, Interfaces and Services  
 CashCrusaders.Data -> Repositories, Storage  
+# Connection String
+Connection String can be found on the CashCrusadersResource.resx file (CashCrusaders.App project)  
+# Database Schema
+See CashCrusaders.Data project under Database folder => Simply Import Data-Tier or Restore
 # Status
 Assessment In Progress -> Target: 26/27 January 2023 (Completion)

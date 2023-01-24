@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.gbSupplierDetails = new System.Windows.Forms.GroupBox();
+            this.bCaptureNewSupplier = new System.Windows.Forms.Button();
+            this.bCaptureNewProduct = new System.Windows.Forms.Button();
             this.bViewProducts = new System.Windows.Forms.Button();
             this.lSupplierList = new System.Windows.Forms.Label();
             this.cbSupplierList = new System.Windows.Forms.ComboBox();
@@ -41,11 +43,12 @@
             this.chPrice = new System.Windows.Forms.ColumnHeader();
             this.chDescription = new System.Windows.Forms.ColumnHeader();
             this.pCreateOrder = new System.Windows.Forms.Panel();
-            this.bCaptureNewProduct = new System.Windows.Forms.Button();
-            this.bCaptureNewSupplier = new System.Windows.Forms.Button();
+            this.bViewOrders = new System.Windows.Forms.Button();
+            this.bCreateNewOrder = new System.Windows.Forms.Button();
             this.gbSupplierDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersRepositoryBindingSource)).BeginInit();
+            this.pCreateOrder.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbSupplierDetails
@@ -62,6 +65,24 @@
             this.gbSupplierDetails.TabIndex = 0;
             this.gbSupplierDetails.TabStop = false;
             this.gbSupplierDetails.Text = "Supplier Details";
+            // 
+            // bCaptureNewSupplier
+            // 
+            this.bCaptureNewSupplier.Location = new System.Drawing.Point(623, 83);
+            this.bCaptureNewSupplier.Name = "bCaptureNewSupplier";
+            this.bCaptureNewSupplier.Size = new System.Drawing.Size(165, 29);
+            this.bCaptureNewSupplier.TabIndex = 4;
+            this.bCaptureNewSupplier.Text = "Capture New Supplier";
+            this.bCaptureNewSupplier.UseVisualStyleBackColor = true;
+            // 
+            // bCaptureNewProduct
+            // 
+            this.bCaptureNewProduct.Location = new System.Drawing.Point(623, 48);
+            this.bCaptureNewProduct.Name = "bCaptureNewProduct";
+            this.bCaptureNewProduct.Size = new System.Drawing.Size(165, 29);
+            this.bCaptureNewProduct.TabIndex = 3;
+            this.bCaptureNewProduct.Text = "Capture New Product";
+            this.bCaptureNewProduct.UseVisualStyleBackColor = true;
             // 
             // bViewProducts
             // 
@@ -135,29 +156,31 @@
             // 
             // pCreateOrder
             // 
+            this.pCreateOrder.Controls.Add(this.bViewOrders);
+            this.pCreateOrder.Controls.Add(this.bCreateNewOrder);
             this.pCreateOrder.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pCreateOrder.Location = new System.Drawing.Point(0, 611);
+            this.pCreateOrder.Location = new System.Drawing.Point(0, 647);
             this.pCreateOrder.Name = "pCreateOrder";
-            this.pCreateOrder.Size = new System.Drawing.Size(800, 125);
+            this.pCreateOrder.Size = new System.Drawing.Size(800, 89);
             this.pCreateOrder.TabIndex = 2;
             // 
-            // bCaptureNewProduct
+            // bViewOrders
             // 
-            this.bCaptureNewProduct.Location = new System.Drawing.Point(623, 48);
-            this.bCaptureNewProduct.Name = "bCaptureNewProduct";
-            this.bCaptureNewProduct.Size = new System.Drawing.Size(165, 29);
-            this.bCaptureNewProduct.TabIndex = 3;
-            this.bCaptureNewProduct.Text = "Capture New Product";
-            this.bCaptureNewProduct.UseVisualStyleBackColor = true;
+            this.bViewOrders.Location = new System.Drawing.Point(401, 22);
+            this.bViewOrders.Name = "bViewOrders";
+            this.bViewOrders.Size = new System.Drawing.Size(165, 29);
+            this.bViewOrders.TabIndex = 5;
+            this.bViewOrders.Text = "View Orders";
+            this.bViewOrders.UseVisualStyleBackColor = true;
             // 
-            // bCaptureNewSupplier
+            // bCreateNewOrder
             // 
-            this.bCaptureNewSupplier.Location = new System.Drawing.Point(623, 83);
-            this.bCaptureNewSupplier.Name = "bCaptureNewSupplier";
-            this.bCaptureNewSupplier.Size = new System.Drawing.Size(165, 29);
-            this.bCaptureNewSupplier.TabIndex = 4;
-            this.bCaptureNewSupplier.Text = "Capture New Supplier";
-            this.bCaptureNewSupplier.UseVisualStyleBackColor = true;
+            this.bCreateNewOrder.Location = new System.Drawing.Point(230, 22);
+            this.bCreateNewOrder.Name = "bCreateNewOrder";
+            this.bCreateNewOrder.Size = new System.Drawing.Size(165, 29);
+            this.bCreateNewOrder.TabIndex = 4;
+            this.bCreateNewOrder.Text = "Create New Order";
+            this.bCreateNewOrder.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -178,6 +201,7 @@
             this.gbSupplierDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersRepositoryBindingSource)).EndInit();
+            this.pCreateOrder.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -197,5 +221,7 @@
         private Button bViewProducts;
         private Button bCaptureNewSupplier;
         private Button bCaptureNewProduct;
+        private Button bViewOrders;
+        private Button bCreateNewOrder;
     }
 }

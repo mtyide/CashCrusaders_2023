@@ -4,7 +4,6 @@ using CashCrusaders.Domain.Interfaces;
 using CashCrusaders.Domain.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 using System.Resources;
 
 namespace CashCrusaders.App

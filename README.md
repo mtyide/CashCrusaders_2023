@@ -1,8 +1,8 @@
 # CashCrusaders Windows Form Assessment
 Type: .NET Core Windows Forms App  
 Using EntityFrameworkCore  
-Dependency Injection  
-C# 6.0  
+Using Dependency Injection  
+Language: C# 6.0  
 Database: SQL Server 2022 Express Edition  
 Database Schema: CashCrusaders.Data project under Database folder
 # Requirements

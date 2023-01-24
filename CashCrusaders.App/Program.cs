@@ -30,7 +30,7 @@ namespace CashCrusaders.App
 
         private static void ConfigureServices(ServiceCollection services)
         {
-            const string resxFile = @".\Main.resx";
+            const string resxFile = @".\CashCrusadersResource.resx";
             var connection = string.Empty;
             using (var resxSet = new ResXResourceSet(resxFile))
             {

@@ -18,6 +18,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="CashCrusadersResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CashCrusadersResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="CashCrusadersResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CashCrusadersResource.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Update="Main.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

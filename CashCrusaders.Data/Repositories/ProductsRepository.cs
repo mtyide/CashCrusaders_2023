@@ -21,6 +21,11 @@ namespace CashCrusaders.Data.Repositories
 
         public Task<List<Product>> GetAll() => _products.ToListAsync();
 
+        public Task<List<Product>> GetProductsBySupplierID(int supplierID)
+        {
+            return _products.Where(x => x.SupplierID == supplierID).ToListAsync();
+        }
+
         public async Task<Product> Insert(Product product)
         {
             _products.Add(product);

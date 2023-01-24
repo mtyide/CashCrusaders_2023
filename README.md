@@ -18,6 +18,6 @@ Connection String can be found on the CashCrusadersResource.resx file (CashCrusa
 # Database Schema
 Please see CashCrusaders.Data project under Database folder => Simply Import Data-Tier Application or Restore using SQL Server Databases folder  
 # Dependency Injection
-Please see Program.cs file => CashCrusaders.App project
+Please see Program.cs & Main.cs file => CashCrusaders.App project
 # Status
 Assessment In Progress -> Target: 26/27 January 2023 (Completion)

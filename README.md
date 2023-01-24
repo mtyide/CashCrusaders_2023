@@ -17,6 +17,8 @@ CashCrusaders.Data -> Repositories, Storage
 Connection String can be found on the CashCrusadersResource.resx file => CashCrusaders.App project  
 # Database Schema
 Please see CashCrusaders.Data project under Database folder => Simply Import Data-Tier Application or Restore using SQL Server Databases folder  
+# Database Logic (DML)
+Please see CashCrusaders.Data => Storage.cs & Respective Repository implementation
 # Dependency Injection (Services)
 Please see Program.cs & Main.cs file => CashCrusaders.App project  
 # Status

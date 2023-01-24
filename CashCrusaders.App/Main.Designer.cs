@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.gbSupplierDetails = new System.Windows.Forms.GroupBox();
+            this.bViewProducts = new System.Windows.Forms.Button();
             this.lSupplierList = new System.Windows.Forms.Label();
             this.cbSupplierList = new System.Windows.Forms.ComboBox();
             this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -40,7 +41,8 @@
             this.chPrice = new System.Windows.Forms.ColumnHeader();
             this.chDescription = new System.Windows.Forms.ColumnHeader();
             this.pCreateOrder = new System.Windows.Forms.Panel();
-            this.bViewProducts = new System.Windows.Forms.Button();
+            this.bCaptureNewProduct = new System.Windows.Forms.Button();
+            this.bCaptureNewSupplier = new System.Windows.Forms.Button();
             this.gbSupplierDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersRepositoryBindingSource)).BeginInit();
@@ -48,21 +50,33 @@
             // 
             // gbSupplierDetails
             // 
+            this.gbSupplierDetails.Controls.Add(this.bCaptureNewSupplier);
+            this.gbSupplierDetails.Controls.Add(this.bCaptureNewProduct);
             this.gbSupplierDetails.Controls.Add(this.bViewProducts);
             this.gbSupplierDetails.Controls.Add(this.lSupplierList);
             this.gbSupplierDetails.Controls.Add(this.cbSupplierList);
             this.gbSupplierDetails.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbSupplierDetails.Location = new System.Drawing.Point(0, 0);
             this.gbSupplierDetails.Name = "gbSupplierDetails";
-            this.gbSupplierDetails.Size = new System.Drawing.Size(800, 101);
+            this.gbSupplierDetails.Size = new System.Drawing.Size(800, 130);
             this.gbSupplierDetails.TabIndex = 0;
             this.gbSupplierDetails.TabStop = false;
             this.gbSupplierDetails.Text = "Supplier Details";
             // 
+            // bViewProducts
+            // 
+            this.bViewProducts.Location = new System.Drawing.Point(467, 48);
+            this.bViewProducts.Name = "bViewProducts";
+            this.bViewProducts.Size = new System.Drawing.Size(150, 29);
+            this.bViewProducts.TabIndex = 2;
+            this.bViewProducts.Text = "View Products";
+            this.bViewProducts.UseVisualStyleBackColor = true;
+            this.bViewProducts.Click += new System.EventHandler(this.bViewProducts_Click);
+            // 
             // lSupplierList
             // 
             this.lSupplierList.AutoSize = true;
-            this.lSupplierList.Location = new System.Drawing.Point(12, 50);
+            this.lSupplierList.Location = new System.Drawing.Point(6, 57);
             this.lSupplierList.Name = "lSupplierList";
             this.lSupplierList.Size = new System.Drawing.Size(90, 20);
             this.lSupplierList.TabIndex = 1;
@@ -74,7 +88,7 @@
             this.cbSupplierList.DisplayMember = "Name";
             this.cbSupplierList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSupplierList.FormattingEnabled = true;
-            this.cbSupplierList.Location = new System.Drawing.Point(108, 42);
+            this.cbSupplierList.Location = new System.Drawing.Point(109, 48);
             this.cbSupplierList.Name = "cbSupplierList";
             this.cbSupplierList.Size = new System.Drawing.Size(352, 28);
             this.cbSupplierList.TabIndex = 0;
@@ -97,9 +111,9 @@
             this.chDescription});
             this.lvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvProducts.GridLines = true;
-            this.lvProducts.Location = new System.Drawing.Point(0, 101);
+            this.lvProducts.Location = new System.Drawing.Point(0, 130);
             this.lvProducts.Name = "lvProducts";
-            this.lvProducts.Size = new System.Drawing.Size(800, 635);
+            this.lvProducts.Size = new System.Drawing.Size(800, 606);
             this.lvProducts.TabIndex = 1;
             this.lvProducts.UseCompatibleStateImageBehavior = false;
             this.lvProducts.View = System.Windows.Forms.View.Details;
@@ -127,15 +141,23 @@
             this.pCreateOrder.Size = new System.Drawing.Size(800, 125);
             this.pCreateOrder.TabIndex = 2;
             // 
-            // bViewProducts
+            // bCaptureNewProduct
             // 
-            this.bViewProducts.Location = new System.Drawing.Point(467, 48);
-            this.bViewProducts.Name = "bViewProducts";
-            this.bViewProducts.Size = new System.Drawing.Size(150, 29);
-            this.bViewProducts.TabIndex = 2;
-            this.bViewProducts.Text = "View Products";
-            this.bViewProducts.UseVisualStyleBackColor = true;
-            this.bViewProducts.Click += new System.EventHandler(this.bViewProducts_Click);
+            this.bCaptureNewProduct.Location = new System.Drawing.Point(623, 48);
+            this.bCaptureNewProduct.Name = "bCaptureNewProduct";
+            this.bCaptureNewProduct.Size = new System.Drawing.Size(165, 29);
+            this.bCaptureNewProduct.TabIndex = 3;
+            this.bCaptureNewProduct.Text = "Capture New Product";
+            this.bCaptureNewProduct.UseVisualStyleBackColor = true;
+            // 
+            // bCaptureNewSupplier
+            // 
+            this.bCaptureNewSupplier.Location = new System.Drawing.Point(623, 83);
+            this.bCaptureNewSupplier.Name = "bCaptureNewSupplier";
+            this.bCaptureNewSupplier.Size = new System.Drawing.Size(165, 29);
+            this.bCaptureNewSupplier.TabIndex = 4;
+            this.bCaptureNewSupplier.Text = "Capture New Supplier";
+            this.bCaptureNewSupplier.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -173,5 +195,7 @@
         private ColumnHeader chDescription;
         private Panel pCreateOrder;
         private Button bViewProducts;
+        private Button bCaptureNewSupplier;
+        private Button bCaptureNewProduct;
     }
 }

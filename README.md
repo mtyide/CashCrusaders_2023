@@ -22,7 +22,7 @@ Please see CashCrusaders.Data => Storage.cs & Respective Repository implementati
 # Dependency Injection (Services)
 Please see Program.cs & Main.cs file => CashCrusaders.App project  
 # Screemshots
-Image 1: Loading Suppliers from DB -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment.png  
-Image 2: Displaying Products from a specific Supplier in a ListView -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment_1.png  
+Image 1: Loading Suppliers from DB into a Dropdown -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment.png  
+Image 2: Displaying Products for a specific Supplier in a ListView -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment_1.png  
 # Status
 Assessment In Progress -> Target: 26/27 January 2023 (Completion)

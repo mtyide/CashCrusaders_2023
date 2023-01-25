@@ -1,6 +1,6 @@
 # CashCrusaders Windows Forms Assessment
-Completed: 25 January 2023  
-Started: 24 January 2023  
+Completed: 25 January 2023, 15.30 CAT +02.00  
+Started: 24 January 2023 17.15 CAT +02.00  
 Type: .NET Core Windows Forms App  
 Using EntityFrameworkCore  
 Using Dependency Injection  

@@ -173,7 +173,7 @@ namespace CashCrusaders.App
                 var qty = int.Parse(item.SubItems[2].Text);
                 total += (price * qty);
             }
-            lSubTotal.Text = $"Sub-Total: R{total}";
+            lSubTotal.Text = $"Sub-Total: R{total} (Tax Inclusive)";
         }
 
         private void Quantity_QtyUpdated(object sender, EventArgs e)

@@ -220,7 +220,7 @@ namespace CashCrusaders.App
                     Description = item.SubItems[3].Text,
                     SubTotal = total
                 });
-                grandTotal += (total + (decimal.Divide(tax, 100) * total));
+                grandTotal += total + (decimal.Divide(tax, 100) * total);
                 total = 0.0M;
             }
             

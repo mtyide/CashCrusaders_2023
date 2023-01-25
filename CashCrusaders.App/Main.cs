@@ -250,10 +250,9 @@ namespace CashCrusaders.App
             }
             else
             {
+                bCreateNewOrder.Enabled = true;
                 MessageBox.Show("Please check your inputs and try again", "Prompt", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
-            bCreateNewOrder.Enabled = true;
         }
 
         private void bViewOrders_Click(object sender, EventArgs e)

@@ -60,20 +60,17 @@
             this.gbSupplierDetails.Controls.Add(this.cbSupplierList);
             this.gbSupplierDetails.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbSupplierDetails.Location = new System.Drawing.Point(0, 0);
-            this.gbSupplierDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbSupplierDetails.Name = "gbSupplierDetails";
-            this.gbSupplierDetails.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbSupplierDetails.Size = new System.Drawing.Size(700, 98);
+            this.gbSupplierDetails.Size = new System.Drawing.Size(840, 131);
             this.gbSupplierDetails.TabIndex = 0;
             this.gbSupplierDetails.TabStop = false;
             this.gbSupplierDetails.Text = "Supplier Details";
             // 
             // bCaptureNewSupplier
             // 
-            this.bCaptureNewSupplier.Location = new System.Drawing.Point(409, 37);
-            this.bCaptureNewSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bCaptureNewSupplier.Location = new System.Drawing.Point(467, 49);
             this.bCaptureNewSupplier.Name = "bCaptureNewSupplier";
-            this.bCaptureNewSupplier.Size = new System.Drawing.Size(130, 22);
+            this.bCaptureNewSupplier.Size = new System.Drawing.Size(179, 29);
             this.bCaptureNewSupplier.TabIndex = 4;
             this.bCaptureNewSupplier.Text = "Capture New Supplier";
             this.bCaptureNewSupplier.UseVisualStyleBackColor = true;
@@ -81,10 +78,9 @@
             // 
             // bCaptureNewProduct
             // 
-            this.bCaptureNewProduct.Location = new System.Drawing.Point(544, 37);
-            this.bCaptureNewProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bCaptureNewProduct.Location = new System.Drawing.Point(653, 49);
             this.bCaptureNewProduct.Name = "bCaptureNewProduct";
-            this.bCaptureNewProduct.Size = new System.Drawing.Size(144, 22);
+            this.bCaptureNewProduct.Size = new System.Drawing.Size(165, 29);
             this.bCaptureNewProduct.TabIndex = 3;
             this.bCaptureNewProduct.Text = "Capture New Product";
             this.bCaptureNewProduct.UseVisualStyleBackColor = true;
@@ -93,9 +89,9 @@
             // lSupplierList
             // 
             this.lSupplierList.AutoSize = true;
-            this.lSupplierList.Location = new System.Drawing.Point(5, 43);
+            this.lSupplierList.Location = new System.Drawing.Point(6, 57);
             this.lSupplierList.Name = "lSupplierList";
-            this.lSupplierList.Size = new System.Drawing.Size(71, 15);
+            this.lSupplierList.Size = new System.Drawing.Size(90, 20);
             this.lSupplierList.TabIndex = 1;
             this.lSupplierList.Text = "Supplier List";
             // 
@@ -105,10 +101,9 @@
             this.cbSupplierList.DisplayMember = "Name";
             this.cbSupplierList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSupplierList.FormattingEnabled = true;
-            this.cbSupplierList.Location = new System.Drawing.Point(95, 36);
-            this.cbSupplierList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbSupplierList.Location = new System.Drawing.Point(109, 48);
             this.cbSupplierList.Name = "cbSupplierList";
-            this.cbSupplierList.Size = new System.Drawing.Size(308, 23);
+            this.cbSupplierList.Size = new System.Drawing.Size(351, 28);
             this.cbSupplierList.TabIndex = 2;
             this.cbSupplierList.ValueMember = "Id";
             this.cbSupplierList.SelectedValueChanged += new System.EventHandler(this.cbSupplierList_SelectedValueChanged);
@@ -133,10 +128,9 @@
             this.lvProducts.Enabled = false;
             this.lvProducts.FullRowSelect = true;
             this.lvProducts.GridLines = true;
-            this.lvProducts.Location = new System.Drawing.Point(0, 98);
-            this.lvProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lvProducts.Location = new System.Drawing.Point(0, 131);
             this.lvProducts.Name = "lvProducts";
-            this.lvProducts.Size = new System.Drawing.Size(700, 454);
+            this.lvProducts.Size = new System.Drawing.Size(840, 605);
             this.lvProducts.TabIndex = 1;
             this.lvProducts.UseCompatibleStateImageBehavior = false;
             this.lvProducts.View = System.Windows.Forms.View.Details;
@@ -167,28 +161,26 @@
             this.pCreateOrder.Controls.Add(this.bViewOrders);
             this.pCreateOrder.Controls.Add(this.bCreateNewOrder);
             this.pCreateOrder.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pCreateOrder.Location = new System.Drawing.Point(0, 477);
-            this.pCreateOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pCreateOrder.Location = new System.Drawing.Point(0, 636);
             this.pCreateOrder.Name = "pCreateOrder";
-            this.pCreateOrder.Size = new System.Drawing.Size(700, 75);
+            this.pCreateOrder.Size = new System.Drawing.Size(840, 100);
             this.pCreateOrder.TabIndex = 2;
             // 
             // lSubTotal
             // 
             this.lSubTotal.AutoSize = true;
             this.lSubTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lSubTotal.Location = new System.Drawing.Point(21, 14);
+            this.lSubTotal.Location = new System.Drawing.Point(24, 19);
             this.lSubTotal.Name = "lSubTotal";
-            this.lSubTotal.Size = new System.Drawing.Size(0, 15);
+            this.lSubTotal.Size = new System.Drawing.Size(0, 20);
             this.lSubTotal.TabIndex = 6;
             // 
             // bViewOrders
             // 
             this.bViewOrders.Enabled = false;
-            this.bViewOrders.Location = new System.Drawing.Point(171, 40);
-            this.bViewOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bViewOrders.Location = new System.Drawing.Point(195, 53);
             this.bViewOrders.Name = "bViewOrders";
-            this.bViewOrders.Size = new System.Drawing.Size(144, 22);
+            this.bViewOrders.Size = new System.Drawing.Size(165, 29);
             this.bViewOrders.TabIndex = 5;
             this.bViewOrders.Text = "View Orders";
             this.bViewOrders.UseVisualStyleBackColor = true;
@@ -197,10 +189,9 @@
             // bCreateNewOrder
             // 
             this.bCreateNewOrder.Enabled = false;
-            this.bCreateNewOrder.Location = new System.Drawing.Point(21, 40);
-            this.bCreateNewOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bCreateNewOrder.Location = new System.Drawing.Point(24, 53);
             this.bCreateNewOrder.Name = "bCreateNewOrder";
-            this.bCreateNewOrder.Size = new System.Drawing.Size(144, 22);
+            this.bCreateNewOrder.Size = new System.Drawing.Size(165, 29);
             this.bCreateNewOrder.TabIndex = 4;
             this.bCreateNewOrder.Text = "Create New Order";
             this.bCreateNewOrder.UseVisualStyleBackColor = true;
@@ -208,15 +199,14 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 552);
+            this.ClientSize = new System.Drawing.Size(840, 736);
             this.Controls.Add(this.pCreateOrder);
             this.Controls.Add(this.lvProducts);
             this.Controls.Add(this.gbSupplierDetails);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

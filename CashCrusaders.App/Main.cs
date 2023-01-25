@@ -234,7 +234,7 @@ namespace CashCrusaders.App
                     Tax = tax,
                     Number = number,
                     SupplierCode = supplier.SupplierCode,
-                    SupplierName = cbSupplierList.SelectedItem.ToString()
+                    SupplierName = cbSupplierList.SelectedText
                 };
 
                 var result = await _ordersService.Insert(order);

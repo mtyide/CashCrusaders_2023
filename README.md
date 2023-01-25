@@ -1,4 +1,4 @@
-# CashCrusaders Windows Form Assessment
+# CashCrusaders Windows Forms Assessment
 Type: .NET Core Windows Forms App  
 Using EntityFrameworkCore  
 Using Dependency Injection  

@@ -16,7 +16,7 @@ CashCrusaders.App -> Windows Forms Application
 CashCrusaders.Domain -> Models, Interfaces and Services  
 CashCrusaders.Data -> Repositories, Storage  
 # Connection String
-Connection String can be found on the CashCrusadersResource.resx file => CashCrusaders.App project  
+Connection String can be found in the CashCrusadersResource.resx file => CashCrusaders.App project  
 # Database Schema
 Please see CashCrusaders.Data project under Database folder => Simply Import Data-Tier Application or Restore using SQL Server Databases folder  
 # Database Logic (DML)

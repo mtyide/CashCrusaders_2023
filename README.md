@@ -1,4 +1,6 @@
 # CashCrusaders Windows Forms Assessment
+Completed: 25 January 2023  
+Started: 24 January 2023  
 Type: .NET Core Windows Forms App  
 Using EntityFrameworkCore  
 Using Dependency Injection  
@@ -30,6 +32,6 @@ Image 3: Create Order for specific product(s) -> https://github.com/mtyide/CashC
 # Status
 Purchase Order Application -> Target: 26/27 January 2023 => 100% completed. See Step-by-step guide documentation (top)  
 Testing & Debugging Orders, Suppliers and Products creation => 0% remaining  
-Refactor Problem 2 Logic => 2% remaining
+Refactor/Review Problem 2 Logic => 100% completed
 # Copyright
 Author: Yandisa Mtyide. 2023 VS Projects

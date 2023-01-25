@@ -107,7 +107,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CaptureSupplier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Capture Supplier";
+            this.Text = "Capture New Supplier";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.CaptureSupplier_Load);
             this.gbCaptureSupplier.ResumeLayout(false);

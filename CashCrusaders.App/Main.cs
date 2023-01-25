@@ -220,6 +220,7 @@ namespace CashCrusaders.App
                     Description = item.SubItems[3].Text,
                     SubTotal = total
                 });
+                total = 0.0M;
             }
             var grandTotal = total + (decimal.Divide(tax, 100) * total);
             var number = string.Format("ORD-{0}", Guid.NewGuid().ToString().ToUpperInvariant().Split('-')[0][..3]);

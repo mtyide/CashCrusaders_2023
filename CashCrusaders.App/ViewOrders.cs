@@ -32,15 +32,15 @@ namespace CashCrusaders.App
                 foreach (var item in result)
                 {
                     var backColor = Color.White;
-                    var product = new ListViewItem { Text = item.Number, Tag = item, BackColor = backColor };
+                    var order = new ListViewItem { Text = item.Number, Tag = item, BackColor = backColor };
 
-                    product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"date", Text = item.Date.ToString("ddd, dd, MMM, yyy HH:mm") });
-                    product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"tax", Text = item.Tax.ToString() });
-                    product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"grandTotal", Text = $"R{item.GrandTotal}" });
-                    product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"code", Text = item.SupplierCode });
-                    product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"name", Text = item.SupplierName });
+                    order.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"date", Text = item.Date.ToString("ddd, dd, MMM, yyy HH:mm") });
+                    order.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"tax", Text = item.Tax.ToString() });
+                    order.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"grandTotal", Text = $"R{item.GrandTotal}" });
+                    order.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"code", Text = item.SupplierCode });
+                    order.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"name", Text = item.SupplierName });
 
-                    list.Add(product);
+                    list.Add(order);
                 }
 
                 lvOrders.Items.AddRange(list.ToArray());
@@ -83,14 +83,14 @@ namespace CashCrusaders.App
             foreach (var item in order.Lines)
             {
                 var backColor = Color.White;
-                var product = new ListViewItem { Text = item.Qty.ToString(), Tag = item, BackColor = backColor };
+                var line = new ListViewItem { Text = item.Qty.ToString(), Tag = item, BackColor = backColor };
 
-                product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"subTotal", Text = $"R{item.SubTotal}" });
-                product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"description", Text = item.Description });
-                product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"code", Text = item.Code });
-                product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"price", Text = item.Price.ToString() });
+                line.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"subTotal", Text = $"R{item.SubTotal}" });
+                line.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"description", Text = item.Description });
+                line.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"code", Text = item.Code });
+                line.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"price", Text = item.Price.ToString() });
 
-                list.Add(product);
+                list.Add(line);
             }
 
             lvOrderLines.Items.AddRange(list.ToArray());

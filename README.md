@@ -25,6 +25,8 @@ Please see Program.cs & Main.cs file => CashCrusaders.App project
 Image 1: Loading Suppliers from DB into a Dropdown -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment.png  
 Image 2: Displaying Products for a specific Supplier in a ListView -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment_1.png  
 # Status
-Assessment In Progress -> Target: 26/27 January 2023 (Completion)
+Assessment In Progress -> Target: 26/27 January 2023 => 96% completed  
+Testing & Debugging Orders, Suppliers and Products creation => 2% remaining  
+Refactor Problem 2 Logic => 2% remaining
 # Copyright
 Author: Yandisa Mtyide 2023 VS Projects

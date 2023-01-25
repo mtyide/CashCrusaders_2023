@@ -21,7 +21,7 @@ Please see CashCrusaders.Data project under Database folder => Simply Import Dat
 Please see CashCrusaders.Data project => Storage.cs & Respective Repository implementation
 # Dependency Injection (Services)
 Please see Program.cs & Main.cs file => CashCrusaders.App project  
-# Screenshots
+# Screenshots (Incremental)
 Image 1: Loading Suppliers from DB into a Dropdown -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment.png  
 Image 2: Displaying Products for a specific Supplier in a ListView -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment_1.png  
 # Status

@@ -38,7 +38,7 @@ namespace CashCrusaders.App
 
             services.AddScoped<IProductsRepository, ProductsRepository>()
                     .AddScoped<IOrdersRepository, OrdersRepository>()
-                    .AddSingleton<ISuppliersRepository, SuppliersRepository>()
+                    .AddScoped<ISuppliersRepository, SuppliersRepository>()
                     .AddScoped<IProductsService, ProductsService>()
                     .AddScoped<IOrdersService, OrdersService>()
                     .AddScoped<ISuppliersService, SuppliersService>();

@@ -54,6 +54,7 @@
             this.chSupplierCode,
             this.chSupplierName});
             this.lvOrders.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lvOrders.Enabled = false;
             this.lvOrders.FullRowSelect = true;
             this.lvOrders.GridLines = true;
             this.lvOrders.Location = new System.Drawing.Point(0, 0);
@@ -103,6 +104,7 @@
             this.chCode,
             this.chPrice});
             this.lvOrderLines.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvOrderLines.Enabled = false;
             this.lvOrderLines.FullRowSelect = true;
             this.lvOrderLines.GridLines = true;
             this.lvOrderLines.Location = new System.Drawing.Point(0, 171);

@@ -130,6 +130,7 @@
             this.chQty,
             this.chDescription});
             this.lvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvProducts.Enabled = false;
             this.lvProducts.FullRowSelect = true;
             this.lvProducts.GridLines = true;
             this.lvProducts.Location = new System.Drawing.Point(0, 98);

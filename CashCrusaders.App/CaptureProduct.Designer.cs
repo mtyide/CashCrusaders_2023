@@ -49,30 +49,27 @@
             this.gbCaptureProduct.Controls.Add(this.lDescription);
             this.gbCaptureProduct.Controls.Add(this.tbDescription);
             this.gbCaptureProduct.Controls.Add(this.bSave);
-            this.gbCaptureProduct.Location = new System.Drawing.Point(19, 9);
-            this.gbCaptureProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbCaptureProduct.Location = new System.Drawing.Point(22, 12);
             this.gbCaptureProduct.Name = "gbCaptureProduct";
-            this.gbCaptureProduct.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbCaptureProduct.Size = new System.Drawing.Size(536, 274);
+            this.gbCaptureProduct.Size = new System.Drawing.Size(613, 365);
             this.gbCaptureProduct.TabIndex = 0;
             this.gbCaptureProduct.TabStop = false;
-            this.gbCaptureProduct.Text = "Caputure | Save Product";
+            this.gbCaptureProduct.Text = "Capture | Save Product";
             // 
             // tbQty
             // 
-            this.tbQty.Location = new System.Drawing.Point(152, 172);
-            this.tbQty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbQty.Location = new System.Drawing.Point(174, 229);
             this.tbQty.Name = "tbQty";
-            this.tbQty.Size = new System.Drawing.Size(75, 23);
+            this.tbQty.Size = new System.Drawing.Size(85, 27);
             this.tbQty.TabIndex = 3;
             this.tbQty.Text = "0,00";
             // 
             // lQty
             // 
             this.lQty.AutoSize = true;
-            this.lQty.Location = new System.Drawing.Point(14, 175);
+            this.lQty.Location = new System.Drawing.Point(16, 233);
             this.lQty.Name = "lQty";
-            this.lQty.Size = new System.Drawing.Size(29, 15);
+            this.lQty.Size = new System.Drawing.Size(35, 20);
             this.lQty.TabIndex = 5;
             this.lQty.Text = "Qty:";
             // 
@@ -80,45 +77,43 @@
             // 
             this.lProductCodeDesc.AutoSize = true;
             this.lProductCodeDesc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lProductCodeDesc.Location = new System.Drawing.Point(152, 147);
+            this.lProductCodeDesc.Location = new System.Drawing.Point(174, 196);
             this.lProductCodeDesc.Name = "lProductCodeDesc";
-            this.lProductCodeDesc.Size = new System.Drawing.Size(0, 15);
+            this.lProductCodeDesc.Size = new System.Drawing.Size(0, 20);
             this.lProductCodeDesc.TabIndex = 4;
             // 
             // lProductCode
             // 
             this.lProductCode.AutoSize = true;
-            this.lProductCode.Location = new System.Drawing.Point(14, 147);
+            this.lProductCode.Location = new System.Drawing.Point(16, 196);
             this.lProductCode.Name = "lProductCode";
-            this.lProductCode.Size = new System.Drawing.Size(38, 15);
+            this.lProductCode.Size = new System.Drawing.Size(47, 20);
             this.lProductCode.TabIndex = 3;
             this.lProductCode.Text = "Code:";
             // 
             // lDescription
             // 
             this.lDescription.AutoSize = true;
-            this.lDescription.Location = new System.Drawing.Point(14, 38);
+            this.lDescription.Location = new System.Drawing.Point(16, 51);
             this.lDescription.Name = "lDescription";
-            this.lDescription.Size = new System.Drawing.Size(70, 15);
+            this.lDescription.Size = new System.Drawing.Size(88, 20);
             this.lDescription.TabIndex = 1;
             this.lDescription.Text = "Description:";
             // 
             // tbDescription
             // 
-            this.tbDescription.Location = new System.Drawing.Point(152, 38);
-            this.tbDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbDescription.Location = new System.Drawing.Point(174, 51);
             this.tbDescription.MaxLength = 150;
             this.tbDescription.Multiline = true;
             this.tbDescription.Name = "tbDescription";
-            this.tbDescription.Size = new System.Drawing.Size(308, 98);
+            this.tbDescription.Size = new System.Drawing.Size(351, 129);
             this.tbDescription.TabIndex = 2;
             // 
             // bSave
             // 
-            this.bSave.Location = new System.Drawing.Point(152, 217);
-            this.bSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bSave.Location = new System.Drawing.Point(174, 289);
             this.bSave.Name = "bSave";
-            this.bSave.Size = new System.Drawing.Size(114, 22);
+            this.bSave.Size = new System.Drawing.Size(130, 29);
             this.bSave.TabIndex = 4;
             this.bSave.Text = "Save";
             this.bSave.UseVisualStyleBackColor = true;
@@ -126,13 +121,12 @@
             // 
             // CaptureProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 299);
+            this.ClientSize = new System.Drawing.Size(646, 399);
             this.Controls.Add(this.gbCaptureProduct);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "CaptureProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

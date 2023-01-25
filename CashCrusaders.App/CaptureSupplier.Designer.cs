@@ -50,7 +50,7 @@
             this.gbCaptureSupplier.Size = new System.Drawing.Size(612, 205);
             this.gbCaptureSupplier.TabIndex = 1;
             this.gbCaptureSupplier.TabStop = false;
-            this.gbCaptureSupplier.Text = "Caputure | Save Supplier";
+            this.gbCaptureSupplier.Text = "Capture | Save Supplier";
             // 
             // lSupplierCodeDesc
             // 

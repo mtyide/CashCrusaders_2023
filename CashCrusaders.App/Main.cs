@@ -60,7 +60,7 @@ namespace CashCrusaders.App
 
                     foreach (var item in result)
                     {
-                        var backColor = System.Drawing.Color.White;
+                        var backColor = Color.White;
                         var product = new ListViewItem { Text = item.ProductCode, Tag = item, BackColor = backColor };
 
                         product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"price", Text = item.Price.ToString() });
@@ -147,7 +147,7 @@ namespace CashCrusaders.App
                 {
                     StartPosition = FormStartPosition.CenterScreen
                 };
-                quantity.QtyUpdated += Quantity_QtyUpdated; ;
+                quantity.QtyUpdated += Quantity_QtyUpdated;
                 quantity.Show();
                 quantity.WindowState = FormWindowState.Normal;
 
@@ -250,6 +250,18 @@ namespace CashCrusaders.App
             }
 
             bCreateNewOrder.Enabled = true;
+        }
+
+        private void bViewOrders_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            var viewOrders = new ViewOrders(_ordersService)
+            {
+                StartPosition = FormStartPosition.CenterScreen
+            };
+            viewOrders.Show();
+            viewOrders.WindowState = FormWindowState.Normal;
+            Cursor = Cursors.Default;
         }
     }
 }

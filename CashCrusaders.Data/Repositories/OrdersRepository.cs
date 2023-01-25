@@ -19,7 +19,7 @@ namespace CashCrusaders.Data.Repositories
             return await _storage.SaveChangesAsync();
         }
 
-        public Task<List<Order>> GetAll() => _orders.ToListAsync();
+        public Task<List<Order>> GetAll() => _orders.Include(x => x.Lines).ToListAsync();
 
         public async Task<Order> Insert(Order order)
         {

@@ -142,6 +142,7 @@
             this.chQty,
             this.chDescription});
             this.lvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvProducts.FullRowSelect = true;
             this.lvProducts.GridLines = true;
             this.lvProducts.Location = new System.Drawing.Point(0, 98);
             this.lvProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -202,6 +203,7 @@
             this.bViewOrders.TabIndex = 5;
             this.bViewOrders.Text = "View Orders";
             this.bViewOrders.UseVisualStyleBackColor = true;
+            this.bViewOrders.Click += new System.EventHandler(this.bViewOrders_Click);
             // 
             // bCreateNewOrder
             // 

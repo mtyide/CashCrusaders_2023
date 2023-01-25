@@ -10,6 +10,7 @@ namespace CashCrusaders.App
         private readonly ISuppliersService _suppliersService;
         private readonly IProductsService _productsService;
         private readonly IOrdersService _ordersService;
+        private bool isLoading = true;
         public Main(ISuppliersService suppliersService, IProductsService productsService, IOrdersService ordersService)
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace CashCrusaders.App
         private void Main_Load(object sender, EventArgs e)
         {
             LoadSuppliers();
+            isLoading = false;
         }
 
         private async void LoadSuppliers()
@@ -262,6 +264,13 @@ namespace CashCrusaders.App
             viewOrders.Show();
             viewOrders.WindowState = FormWindowState.Normal;
             Cursor = Cursors.Default;
+        }
+
+        private async void cbSupplierList_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (isLoading == true) { return; }
+
+            await LoadProductsBySelectedSupplier();
         }
     }
 }

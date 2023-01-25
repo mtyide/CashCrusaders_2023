@@ -124,6 +124,7 @@
             this.cbSupplierList.Size = new System.Drawing.Size(308, 23);
             this.cbSupplierList.TabIndex = 2;
             this.cbSupplierList.ValueMember = "Id";
+            this.cbSupplierList.SelectedValueChanged += new System.EventHandler(this.cbSupplierList_SelectedValueChanged);
             // 
             // supplierBindingSource
             // 

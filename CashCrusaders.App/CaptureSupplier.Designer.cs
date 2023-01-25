@@ -82,7 +82,7 @@
             // tbName
             // 
             this.tbName.Location = new System.Drawing.Point(174, 50);
-            this.tbName.MaxLength = 150;
+            this.tbName.MaxLength = 50;
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(351, 27);
             this.tbName.TabIndex = 2;

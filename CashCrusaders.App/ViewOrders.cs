@@ -34,7 +34,7 @@ namespace CashCrusaders.App
                     var backColor = Color.White;
                     var product = new ListViewItem { Text = item.Number, Tag = item, BackColor = backColor };
 
-                    product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"date", Text = item.Date.ToString("ddd, dd, MMM, yyy") });
+                    product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"date", Text = item.Date.ToString("ddd, dd, MMM, yyy HH:mm") });
                     product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"tax", Text = item.Tax.ToString() });
                     product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"grandTotal", Text = $"R{item.GrandTotal}" });
                     product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"code", Text = item.SupplierCode });

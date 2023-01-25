@@ -40,7 +40,7 @@ namespace CashCrusaders.App
                 var button = MessageBox.Show("Supplier has been successfully added", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (button == DialogResult.OK)
                 {
-                    SupplierCreated?.Invoke(this, EventArgs.Empty);
+                    SupplierCreated?.Invoke(result, EventArgs.Empty);
                     Close();
                     Dispose();
                 }

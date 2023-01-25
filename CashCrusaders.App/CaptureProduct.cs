@@ -60,7 +60,7 @@ namespace CashCrusaders.App
                 var button = MessageBox.Show("Product has been successfully added", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (button == DialogResult.OK)
                 {
-                    ProductCreated?.Invoke(this, EventArgs.Empty);
+                    ProductCreated?.Invoke(result, EventArgs.Empty);
                     Close();
                     Dispose();
                 }

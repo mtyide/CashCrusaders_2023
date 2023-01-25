@@ -22,7 +22,6 @@ namespace CashCrusaders.App
         private void Main_Load(object sender, EventArgs e)
         {
             LoadSuppliers();
-            isLoading = false;
         }
 
         private async void LoadSuppliers()
@@ -33,6 +32,8 @@ namespace CashCrusaders.App
             cbSupplierList.SelectedIndex = 0;
             cbSupplierList.ValueMember = "Id";
             if (list.Count > 0) { bViewOrders.Enabled = true; }
+            isLoading = false;
+            await LoadProductsBySelectedSupplier();
         }
 
         private static int DoProductsSort(Product x, Product y)

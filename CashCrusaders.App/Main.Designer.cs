@@ -33,7 +33,6 @@
             this.gbSupplierDetails = new System.Windows.Forms.GroupBox();
             this.bCaptureNewSupplier = new System.Windows.Forms.Button();
             this.bCaptureNewProduct = new System.Windows.Forms.Button();
-            this.bViewProducts = new System.Windows.Forms.Button();
             this.lSupplierList = new System.Windows.Forms.Label();
             this.cbSupplierList = new System.Windows.Forms.ComboBox();
             this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -57,7 +56,6 @@
             // 
             this.gbSupplierDetails.Controls.Add(this.bCaptureNewSupplier);
             this.gbSupplierDetails.Controls.Add(this.bCaptureNewProduct);
-            this.gbSupplierDetails.Controls.Add(this.bViewProducts);
             this.gbSupplierDetails.Controls.Add(this.lSupplierList);
             this.gbSupplierDetails.Controls.Add(this.cbSupplierList);
             this.gbSupplierDetails.Dock = System.Windows.Forms.DockStyle.Top;
@@ -72,10 +70,10 @@
             // 
             // bCaptureNewSupplier
             // 
-            this.bCaptureNewSupplier.Location = new System.Drawing.Point(545, 62);
+            this.bCaptureNewSupplier.Location = new System.Drawing.Point(409, 37);
             this.bCaptureNewSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bCaptureNewSupplier.Name = "bCaptureNewSupplier";
-            this.bCaptureNewSupplier.Size = new System.Drawing.Size(144, 22);
+            this.bCaptureNewSupplier.Size = new System.Drawing.Size(130, 22);
             this.bCaptureNewSupplier.TabIndex = 4;
             this.bCaptureNewSupplier.Text = "Capture New Supplier";
             this.bCaptureNewSupplier.UseVisualStyleBackColor = true;
@@ -83,7 +81,7 @@
             // 
             // bCaptureNewProduct
             // 
-            this.bCaptureNewProduct.Location = new System.Drawing.Point(545, 36);
+            this.bCaptureNewProduct.Location = new System.Drawing.Point(544, 37);
             this.bCaptureNewProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bCaptureNewProduct.Name = "bCaptureNewProduct";
             this.bCaptureNewProduct.Size = new System.Drawing.Size(144, 22);
@@ -91,17 +89,6 @@
             this.bCaptureNewProduct.Text = "Capture New Product";
             this.bCaptureNewProduct.UseVisualStyleBackColor = true;
             this.bCaptureNewProduct.Click += new System.EventHandler(this.bCaptureNewProduct_Click);
-            // 
-            // bViewProducts
-            // 
-            this.bViewProducts.Location = new System.Drawing.Point(409, 36);
-            this.bViewProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bViewProducts.Name = "bViewProducts";
-            this.bViewProducts.Size = new System.Drawing.Size(131, 22);
-            this.bViewProducts.TabIndex = 3;
-            this.bViewProducts.Text = "View Products";
-            this.bViewProducts.UseVisualStyleBackColor = true;
-            this.bViewProducts.Click += new System.EventHandler(this.bViewProducts_Click);
             // 
             // lSupplierList
             // 
@@ -256,7 +243,6 @@
         private ColumnHeader chPrice;
         private ColumnHeader chDescription;
         private Panel pCreateOrder;
-        private Button bViewProducts;
         private Button bCaptureNewSupplier;
         private Button bCaptureNewProduct;
         private Button bViewOrders;

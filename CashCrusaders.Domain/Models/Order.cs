@@ -6,7 +6,7 @@ namespace CashCrusaders.Domain.Models
     {
         public int Id { get; set; }
         [Required]
-        [StringLength(5)]
+        [StringLength(10)]
         public string Number { get; set; }
         [Required]
         public DateTime Date { get; set; }

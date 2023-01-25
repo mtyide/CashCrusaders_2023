@@ -1,19 +1,21 @@
 ﻿using CashCrusaders.Domain.Interfaces;
 using CashCrusaders.Domain.Models;
-using Microsoft.VisualBasic.ApplicationServices;
-using System.Windows.Forms;
+using System.Resources;
 
 namespace CashCrusaders.App
 {
     public partial class Main : Form
     {
+        private int holdPos = 0;
         private readonly ISuppliersService _suppliersService;
         private readonly IProductsService _productsService;
-        public Main(ISuppliersService suppliersService, IProductsService productsService)
+        private readonly IOrdersService _ordersService;
+        public Main(ISuppliersService suppliersService, IProductsService productsService, IOrdersService ordersService)
         {
             InitializeComponent();
             _suppliersService = suppliersService;
             _productsService = productsService;
+            _ordersService = ordersService;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -28,6 +30,7 @@ namespace CashCrusaders.App
             cbSupplierList.DisplayMember = "SupplierName";
             cbSupplierList.SelectedIndex = 0;
             cbSupplierList.ValueMember = "Id";
+            if (list.Count > 0) { bViewOrders.Enabled = true; }
         }
 
         private static int DoProductsSort(Product x, Product y)
@@ -63,6 +66,7 @@ namespace CashCrusaders.App
                         product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"price", Text = item.Price.ToString() });
                         product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"qty", Text = string.Empty });
                         product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"description", Text = item.Description });
+                        product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"code", Text = item.ProductCode });
 
                         list.Add(product);
                     }
@@ -123,6 +127,129 @@ namespace CashCrusaders.App
         private void Supplier_SupplierCreated(object sender, EventArgs e)
         {
             LoadSuppliers();
+        }
+
+        private void lvProducts_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            bCreateNewOrder.Enabled = false;
+            var index = e.Item.Index;
+            holdPos = index;
+            if (e.Item.Checked)
+            {
+                if (index > 0) { holdPos++; }
+
+                var product = (Product)lvProducts.Items[index].Tag;
+
+                Application.DoEvents();
+
+                Cursor = Cursors.WaitCursor;
+                var quantity = new CaptureQuantity()
+                {
+                    StartPosition = FormStartPosition.CenterScreen
+                };
+                quantity.QtyUpdated += Quantity_QtyUpdated; ;
+                quantity.Show();
+                quantity.WindowState = FormWindowState.Normal;
+
+                bCreateNewOrder.Enabled = true;
+                Cursor = Cursors.Default;
+            }
+            else
+            {
+                lvProducts.Items[holdPos].SubItems[2].Text = string.Empty;
+                CalculateSubTotal();
+            }
+        }
+
+        private void CalculateSubTotal()
+        {
+            var total = 0.0M;
+            foreach (ListViewItem item in lvProducts.CheckedItems)
+            {
+                var price = decimal.Parse(item.SubItems[1].Text);
+                var qty = int.Parse(item.SubItems[2].Text);
+                total += (price * qty);
+            }
+            lSubTotal.Text = $"Sub-Total: R{total}";
+        }
+
+        private void Quantity_QtyUpdated(object sender, EventArgs e)
+        {
+            var qty = Convert.ToInt32(sender);
+            if (qty == 0)
+            {
+                if (holdPos > 1) { holdPos--; }
+                lvProducts.Items[holdPos].SubItems[2].Text = string.Empty;
+                lvProducts.Items[holdPos].Checked = false;
+            }
+            else
+            {
+                if (holdPos > 1) { holdPos--; }
+                lvProducts.Items[holdPos].SubItems[2].Text = Convert.ToString(sender);
+                CalculateSubTotal();
+            }
+        }
+
+        private async void bCreateNewOrder_Click(object sender, EventArgs e)
+        {
+            bCreateNewOrder.Enabled = false;
+            const string resxFile = @".\CashCrusadersResource.resx";
+            decimal tax = 00.00M;
+            using (var resxSet = new ResXResourceSet(resxFile))
+            {
+                _ = decimal.TryParse(resxSet.GetString("tax"), out tax);
+            }
+
+            if (tax <= 0) { tax = 14.00M; }
+
+            var lines = new List<OrderLine>();
+            var total = 0.0M;
+            foreach (ListViewItem item in lvProducts.CheckedItems)
+            {
+                var price = decimal.Parse(item.SubItems[1].Text);
+                var qty = int.Parse(item.SubItems[2].Text);
+                total += (price * qty);
+                lines.Add(new OrderLine
+                {
+                    Price = price,
+                    Qty = qty,
+                    Code = item.SubItems[4].Text,
+                    Description = item.SubItems[3].Text,
+                    SubTotal = total
+                });
+            }
+            var grandTotal = total + (decimal.Divide(tax, 100) * total);
+            var number = string.Format("ORD-{0}", Guid.NewGuid().ToString().ToUpperInvariant().Split('-')[0][..3]);
+
+            var id = (int)cbSupplierList.SelectedValue;
+            var supplier = await _suppliersService.GetById(id);
+
+            if (supplier != null)
+            {
+                var order = new Order
+                {
+                    Date = DateTime.UtcNow,
+                    GrandTotal = grandTotal,
+                    Lines = lines,
+                    Tax = tax,
+                    Number = number,
+                    SupplierCode = supplier.SupplierCode,
+                    SupplierName = cbSupplierList.SelectedItem.ToString()
+                };
+
+                var result = await _ordersService.Insert(order);
+                if (result != null)
+                {
+                    MessageBox.Show("Order has been successfully created", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    await LoadProductsBySelectedSupplier();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please check your inputs and try again", "Prompt", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            bCreateNewOrder.Enabled = true;
         }
     }
 }

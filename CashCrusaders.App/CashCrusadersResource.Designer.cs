@@ -68,5 +68,14 @@ namespace CashCrusaders.App {
                 return ResourceManager.GetString("connectionString", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 14.00.
+        /// </summary>
+        internal static string tax {
+            get {
+                return ResourceManager.GetString("tax", resourceCulture);
+            }
+        }
     }
 }

@@ -21,6 +21,11 @@ namespace CashCrusaders.Data.Repositories
 
         public Task<List<Supplier>> GetAll() => _suppliers.ToListAsync();
 
+        public async Task<Supplier> GetById(int id)
+        {
+            return await _suppliers.SingleOrDefaultAsync(x => x.Id.Equals(id));
+        }
+
         public async Task<Supplier> Insert(Supplier supplier)
         {
             _suppliers.Add(supplier);

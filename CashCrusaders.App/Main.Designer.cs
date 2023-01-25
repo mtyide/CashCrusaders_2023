@@ -44,6 +44,7 @@
             this.chQty = new System.Windows.Forms.ColumnHeader();
             this.chDescription = new System.Windows.Forms.ColumnHeader();
             this.pCreateOrder = new System.Windows.Forms.Panel();
+            this.lSubTotal = new System.Windows.Forms.Label();
             this.bViewOrders = new System.Windows.Forms.Button();
             this.bCreateNewOrder = new System.Windows.Forms.Button();
             this.gbSupplierDetails.SuspendLayout();
@@ -61,17 +62,20 @@
             this.gbSupplierDetails.Controls.Add(this.cbSupplierList);
             this.gbSupplierDetails.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbSupplierDetails.Location = new System.Drawing.Point(0, 0);
+            this.gbSupplierDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbSupplierDetails.Name = "gbSupplierDetails";
-            this.gbSupplierDetails.Size = new System.Drawing.Size(800, 130);
+            this.gbSupplierDetails.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbSupplierDetails.Size = new System.Drawing.Size(700, 98);
             this.gbSupplierDetails.TabIndex = 0;
             this.gbSupplierDetails.TabStop = false;
             this.gbSupplierDetails.Text = "Supplier Details";
             // 
             // bCaptureNewSupplier
             // 
-            this.bCaptureNewSupplier.Location = new System.Drawing.Point(623, 83);
+            this.bCaptureNewSupplier.Location = new System.Drawing.Point(545, 62);
+            this.bCaptureNewSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bCaptureNewSupplier.Name = "bCaptureNewSupplier";
-            this.bCaptureNewSupplier.Size = new System.Drawing.Size(165, 29);
+            this.bCaptureNewSupplier.Size = new System.Drawing.Size(144, 22);
             this.bCaptureNewSupplier.TabIndex = 4;
             this.bCaptureNewSupplier.Text = "Capture New Supplier";
             this.bCaptureNewSupplier.UseVisualStyleBackColor = true;
@@ -79,9 +83,10 @@
             // 
             // bCaptureNewProduct
             // 
-            this.bCaptureNewProduct.Location = new System.Drawing.Point(623, 48);
+            this.bCaptureNewProduct.Location = new System.Drawing.Point(545, 36);
+            this.bCaptureNewProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bCaptureNewProduct.Name = "bCaptureNewProduct";
-            this.bCaptureNewProduct.Size = new System.Drawing.Size(165, 29);
+            this.bCaptureNewProduct.Size = new System.Drawing.Size(144, 22);
             this.bCaptureNewProduct.TabIndex = 3;
             this.bCaptureNewProduct.Text = "Capture New Product";
             this.bCaptureNewProduct.UseVisualStyleBackColor = true;
@@ -89,9 +94,10 @@
             // 
             // bViewProducts
             // 
-            this.bViewProducts.Location = new System.Drawing.Point(467, 48);
+            this.bViewProducts.Location = new System.Drawing.Point(409, 36);
+            this.bViewProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bViewProducts.Name = "bViewProducts";
-            this.bViewProducts.Size = new System.Drawing.Size(150, 29);
+            this.bViewProducts.Size = new System.Drawing.Size(131, 22);
             this.bViewProducts.TabIndex = 3;
             this.bViewProducts.Text = "View Products";
             this.bViewProducts.UseVisualStyleBackColor = true;
@@ -100,9 +106,9 @@
             // lSupplierList
             // 
             this.lSupplierList.AutoSize = true;
-            this.lSupplierList.Location = new System.Drawing.Point(6, 57);
+            this.lSupplierList.Location = new System.Drawing.Point(5, 43);
             this.lSupplierList.Name = "lSupplierList";
-            this.lSupplierList.Size = new System.Drawing.Size(90, 20);
+            this.lSupplierList.Size = new System.Drawing.Size(71, 15);
             this.lSupplierList.TabIndex = 1;
             this.lSupplierList.Text = "Supplier List";
             // 
@@ -112,9 +118,10 @@
             this.cbSupplierList.DisplayMember = "Name";
             this.cbSupplierList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSupplierList.FormattingEnabled = true;
-            this.cbSupplierList.Location = new System.Drawing.Point(109, 48);
+            this.cbSupplierList.Location = new System.Drawing.Point(95, 36);
+            this.cbSupplierList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbSupplierList.Name = "cbSupplierList";
-            this.cbSupplierList.Size = new System.Drawing.Size(352, 28);
+            this.cbSupplierList.Size = new System.Drawing.Size(308, 23);
             this.cbSupplierList.TabIndex = 2;
             this.cbSupplierList.ValueMember = "Id";
             // 
@@ -136,12 +143,14 @@
             this.chDescription});
             this.lvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvProducts.GridLines = true;
-            this.lvProducts.Location = new System.Drawing.Point(0, 130);
+            this.lvProducts.Location = new System.Drawing.Point(0, 98);
+            this.lvProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvProducts.Name = "lvProducts";
-            this.lvProducts.Size = new System.Drawing.Size(800, 606);
+            this.lvProducts.Size = new System.Drawing.Size(700, 454);
             this.lvProducts.TabIndex = 1;
             this.lvProducts.UseCompatibleStateImageBehavior = false;
             this.lvProducts.View = System.Windows.Forms.View.Details;
+            this.lvProducts.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lvProducts_ItemChecked);
             // 
             // chProductCode
             // 
@@ -164,42 +173,59 @@
             // 
             // pCreateOrder
             // 
+            this.pCreateOrder.Controls.Add(this.lSubTotal);
             this.pCreateOrder.Controls.Add(this.bViewOrders);
             this.pCreateOrder.Controls.Add(this.bCreateNewOrder);
             this.pCreateOrder.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pCreateOrder.Location = new System.Drawing.Point(0, 647);
+            this.pCreateOrder.Location = new System.Drawing.Point(0, 477);
+            this.pCreateOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pCreateOrder.Name = "pCreateOrder";
-            this.pCreateOrder.Size = new System.Drawing.Size(800, 89);
+            this.pCreateOrder.Size = new System.Drawing.Size(700, 75);
             this.pCreateOrder.TabIndex = 2;
+            // 
+            // lSubTotal
+            // 
+            this.lSubTotal.AutoSize = true;
+            this.lSubTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lSubTotal.Location = new System.Drawing.Point(21, 14);
+            this.lSubTotal.Name = "lSubTotal";
+            this.lSubTotal.Size = new System.Drawing.Size(0, 15);
+            this.lSubTotal.TabIndex = 6;
             // 
             // bViewOrders
             // 
-            this.bViewOrders.Location = new System.Drawing.Point(401, 22);
+            this.bViewOrders.Enabled = false;
+            this.bViewOrders.Location = new System.Drawing.Point(171, 40);
+            this.bViewOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bViewOrders.Name = "bViewOrders";
-            this.bViewOrders.Size = new System.Drawing.Size(165, 29);
+            this.bViewOrders.Size = new System.Drawing.Size(144, 22);
             this.bViewOrders.TabIndex = 5;
             this.bViewOrders.Text = "View Orders";
             this.bViewOrders.UseVisualStyleBackColor = true;
             // 
             // bCreateNewOrder
             // 
-            this.bCreateNewOrder.Location = new System.Drawing.Point(230, 22);
+            this.bCreateNewOrder.Enabled = false;
+            this.bCreateNewOrder.Location = new System.Drawing.Point(21, 40);
+            this.bCreateNewOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bCreateNewOrder.Name = "bCreateNewOrder";
-            this.bCreateNewOrder.Size = new System.Drawing.Size(165, 29);
+            this.bCreateNewOrder.Size = new System.Drawing.Size(144, 22);
             this.bCreateNewOrder.TabIndex = 4;
             this.bCreateNewOrder.Text = "Create New Order";
             this.bCreateNewOrder.UseVisualStyleBackColor = true;
+            this.bCreateNewOrder.Click += new System.EventHandler(this.bCreateNewOrder_Click);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 736);
+            this.ClientSize = new System.Drawing.Size(700, 552);
             this.Controls.Add(this.pCreateOrder);
             this.Controls.Add(this.lvProducts);
             this.Controls.Add(this.gbSupplierDetails);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -210,6 +236,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersRepositoryBindingSource)).EndInit();
             this.pCreateOrder.ResumeLayout(false);
+            this.pCreateOrder.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -232,5 +259,6 @@
         private Button bViewOrders;
         private Button bCreateNewOrder;
         private ColumnHeader chQty;
+        private Label lSubTotal;
     }
 }

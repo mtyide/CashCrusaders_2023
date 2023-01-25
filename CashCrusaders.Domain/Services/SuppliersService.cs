@@ -16,6 +16,11 @@ namespace CashCrusaders.Domain.Services
             return _suppliersRepository.GetAll();
         }
 
+        public Task<Supplier> GetById(int id)
+        {
+            return _suppliersRepository.GetById(id);
+        }
+
         public Task<Supplier> Insert(Supplier supplier)
         {
             return _suppliersRepository.Insert(supplier);

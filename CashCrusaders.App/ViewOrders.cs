@@ -69,11 +69,11 @@ namespace CashCrusaders.App
             var order = (Order)lvOrders.Items[e.ItemIndex].Tag;
             if (order != null)
             {
-                PopulateLInes(order);
+                PopulateLines(order);
             }
         }
 
-        private void PopulateLInes(Order order)
+        private void PopulateLines(Order order)
         {
             lvOrderLines.Items.Clear();
             lvOrderLines.Visible = false;

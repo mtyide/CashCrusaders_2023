@@ -1,4 +1,4 @@
-# CashCrusaders Windows Form Assessment
+# CashCrusaders Windows Forms Assessment
 Type: .NET Core Windows Forms App  
 Using EntityFrameworkCore  
 Using Dependency Injection  
@@ -16,7 +16,7 @@ CashCrusaders.App -> Windows Forms Application
 CashCrusaders.Domain -> Models, Interfaces and Services  
 CashCrusaders.Data -> Repositories, Storage  
 # Connection String
-Connection String can be found on the CashCrusadersResource.resx file => CashCrusaders.App project  
+Connection String can be found in the CashCrusadersResource.resx file => CashCrusaders.App project  
 # Database Schema
 Please see CashCrusaders.Data project under Database folder => Simply Import Data-Tier Application or Restore using SQL Server Databases folder  
 # Database Logic (DML)
@@ -28,7 +28,7 @@ Image 1: Loading Suppliers from DB into a Dropdown -> https://github.com/mtyide/
 Image 2: Displaying Products for a specific Supplier in a ListView -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment_1.png  
 Image 3: Create Order for specific product(s) -> https://github.com/mtyide/CashCrusaders_2023/blob/master/createOrders.png  
 # Status
-Purchase Order Application -> Target: 26/27 January 2023 => 100% completed  
+Purchase Order Application -> Target: 26/27 January 2023 => 100% completed. See Step-by-step guide documentation (top)  
 Testing & Debugging Orders, Suppliers and Products creation => 0% remaining  
 Refactor Problem 2 Logic => 2% remaining
 # Copyright

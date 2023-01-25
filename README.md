@@ -11,8 +11,8 @@ Step-by-steb Guide -> https://drive.google.com/file/d/1EycqLzbd2x9e31WoNy984QX0F
 Dependency Injection: See topics below  
 # Requirements
 .NET Core 6.0
-SQL Server 20**  
-Visual Studio 20**  
+SQL Server 2019 or latest  
+Visual Studio 2019 or latest  
 # Project Structure
 CashCrusaders.App -> Windows Forms Application  
 CashCrusaders.Domain -> Models, Interfaces and Services  

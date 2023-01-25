@@ -41,6 +41,7 @@
             this.lvProducts = new System.Windows.Forms.ListView();
             this.chProductCode = new System.Windows.Forms.ColumnHeader();
             this.chPrice = new System.Windows.Forms.ColumnHeader();
+            this.chQty = new System.Windows.Forms.ColumnHeader();
             this.chDescription = new System.Windows.Forms.ColumnHeader();
             this.pCreateOrder = new System.Windows.Forms.Panel();
             this.bViewOrders = new System.Windows.Forms.Button();
@@ -74,6 +75,7 @@
             this.bCaptureNewSupplier.TabIndex = 4;
             this.bCaptureNewSupplier.Text = "Capture New Supplier";
             this.bCaptureNewSupplier.UseVisualStyleBackColor = true;
+            this.bCaptureNewSupplier.Click += new System.EventHandler(this.bCaptureNewSupplier_Click);
             // 
             // bCaptureNewProduct
             // 
@@ -83,13 +85,14 @@
             this.bCaptureNewProduct.TabIndex = 3;
             this.bCaptureNewProduct.Text = "Capture New Product";
             this.bCaptureNewProduct.UseVisualStyleBackColor = true;
+            this.bCaptureNewProduct.Click += new System.EventHandler(this.bCaptureNewProduct_Click);
             // 
             // bViewProducts
             // 
             this.bViewProducts.Location = new System.Drawing.Point(467, 48);
             this.bViewProducts.Name = "bViewProducts";
             this.bViewProducts.Size = new System.Drawing.Size(150, 29);
-            this.bViewProducts.TabIndex = 2;
+            this.bViewProducts.TabIndex = 3;
             this.bViewProducts.Text = "View Products";
             this.bViewProducts.UseVisualStyleBackColor = true;
             this.bViewProducts.Click += new System.EventHandler(this.bViewProducts_Click);
@@ -112,7 +115,7 @@
             this.cbSupplierList.Location = new System.Drawing.Point(109, 48);
             this.cbSupplierList.Name = "cbSupplierList";
             this.cbSupplierList.Size = new System.Drawing.Size(352, 28);
-            this.cbSupplierList.TabIndex = 0;
+            this.cbSupplierList.TabIndex = 2;
             this.cbSupplierList.ValueMember = "Id";
             // 
             // supplierBindingSource
@@ -129,6 +132,7 @@
             this.lvProducts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chProductCode,
             this.chPrice,
+            this.chQty,
             this.chDescription});
             this.lvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvProducts.GridLines = true;
@@ -148,6 +152,10 @@
             // 
             this.chPrice.Text = "Price";
             this.chPrice.Width = 150;
+            // 
+            // chQty
+            // 
+            this.chQty.Text = "Qty";
             // 
             // chDescription
             // 
@@ -194,7 +202,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Main";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Purchase Order Application";
             this.Load += new System.EventHandler(this.Main_Load);
             this.gbSupplierDetails.ResumeLayout(false);
@@ -223,5 +231,6 @@
         private Button bCaptureNewProduct;
         private Button bViewOrders;
         private Button bCreateNewOrder;
+        private ColumnHeader chQty;
     }
 }

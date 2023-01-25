@@ -1,5 +1,7 @@
 ﻿using CashCrusaders.Domain.Interfaces;
 using CashCrusaders.Domain.Models;
+using Microsoft.VisualBasic.ApplicationServices;
+using System.Windows.Forms;
 
 namespace CashCrusaders.App
 {
@@ -35,6 +37,11 @@ namespace CashCrusaders.App
 
         private async void bViewProducts_Click(object sender, EventArgs e)
         {
+            await LoadProductsBySelectedSupplier();
+        }
+
+        private async Task LoadProductsBySelectedSupplier()
+        {
             var supplierID = (int)cbSupplierList.SelectedValue;
             if (supplierID > 0)
             {
@@ -54,6 +61,7 @@ namespace CashCrusaders.App
                         var product = new ListViewItem { Text = item.ProductCode, Tag = item, BackColor = backColor };
 
                         product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"price", Text = item.Price.ToString() });
+                        product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"qty", Text = string.Empty });
                         product.SubItems.Add(new ListViewItem.ListViewSubItem { Name = @"description", Text = item.Description });
 
                         list.Add(product);
@@ -75,5 +83,46 @@ namespace CashCrusaders.App
             listview.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
         #endregion
+
+        private void bCaptureNewProduct_Click(object sender, EventArgs e)
+        {
+            Application.DoEvents();
+
+            Cursor = Cursors.WaitCursor;
+            var product = new CaptureProduct(_productsService)
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                SupplierID = (int)cbSupplierList.SelectedValue
+            };
+            product.ProductCreated += Product_ProductCreated;
+            product.Show();
+            product.WindowState = FormWindowState.Normal;
+            Cursor = Cursors.Default;
+        }
+
+        private async void Product_ProductCreated(object sender, EventArgs e)
+        {
+            await LoadProductsBySelectedSupplier();
+        }
+
+        private void bCaptureNewSupplier_Click(object sender, EventArgs e)
+        {
+            Application.DoEvents();
+
+            Cursor = Cursors.WaitCursor;
+            var supplier = new CaptureSupplier(_suppliersService)
+            {
+                StartPosition = FormStartPosition.CenterScreen
+            };
+            supplier.SupplierCreated += Supplier_SupplierCreated; ;
+            supplier.Show();
+            supplier.WindowState = FormWindowState.Normal;
+            Cursor = Cursors.Default;
+        }
+
+        private void Supplier_SupplierCreated(object sender, EventArgs e)
+        {
+            LoadSuppliers();
+        }
     }
 }

@@ -24,6 +24,8 @@ Please see Program.cs & Main.cs file => CashCrusaders.App project
 # Screenshots (Incremental)
 Image 1: Loading Suppliers from DB into a Dropdown -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment.png  
 Image 2: Displaying Products for a specific Supplier in a ListView -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment_1.png  
+Image 3: Create Order for specific product(s) -> https://github.com/mtyide/CashCrusaders_2023/blob/master/createOrders.png  
+Image 4: View Orders & Lines in a ListView -> https://github.com/mtyide/CashCrusaders_2023/blob/master/viewOrders.png    
 # Status
 Assessment In Progress -> Target: 26/27 January 2023 => 96% completed  
 Testing & Debugging Orders, Suppliers and Products creation => 2% remaining  

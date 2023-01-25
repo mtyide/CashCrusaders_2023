@@ -207,11 +207,12 @@ namespace CashCrusaders.App
 
             var lines = new List<OrderLine>();
             var total = 0.0M;
+            var grandTotal = 0.0M;
             foreach (ListViewItem item in lvProducts.CheckedItems)
             {
                 var price = decimal.Parse(item.SubItems[1].Text);
                 var qty = int.Parse(item.SubItems[2].Text);
-                total += (price * qty);
+                total = (price * qty);
                 lines.Add(new OrderLine
                 {
                     Price = price,
@@ -220,11 +221,11 @@ namespace CashCrusaders.App
                     Description = item.SubItems[3].Text,
                     SubTotal = total
                 });
+                grandTotal += (total + (decimal.Divide(tax, 100) * total));
                 total = 0.0M;
             }
-            var grandTotal = total + (decimal.Divide(tax, 100) * total);
+            
             var number = string.Format("ORD-{0}", Guid.NewGuid().ToString().ToUpperInvariant().Split('-')[0][..3]);
-
             var id = (int)cbSupplierList.SelectedValue;
             var supplier = await _suppliersService.GetById(id);
 

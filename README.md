@@ -32,4 +32,4 @@ Purchase Order Application -> Target: 26/27 January 2023 => 100% completed
 Testing & Debugging Orders, Suppliers and Products creation => 0% remaining  
 Refactor Problem 2 Logic => 2% remaining
 # Copyright
-Author: Yandisa Mtyide 2023 VS Projects
+Author: Yandisa Mtyide. 2023 VS Projects

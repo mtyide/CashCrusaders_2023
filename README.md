@@ -4,7 +4,8 @@ Using EntityFrameworkCore
 Using Dependency Injection  
 Language: C# 6.0  
 Database: SQL Server 2022 Express Edition  
-Database Schema: CashCrusaders.Data project under Database folder
+Database Schema: CashCrusaders.Data project under Database folder  
+Step-by-steb Guide -> https://drive.google.com/file/d/1EycqLzbd2x9e31WoNy984QX0Fyzyo97a/view?usp=share_link  
 # Requirements
 .NET Core 6.0
 SQL Server 20**  

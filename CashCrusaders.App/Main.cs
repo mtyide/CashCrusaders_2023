@@ -206,13 +206,12 @@ namespace CashCrusaders.App
             if (tax <= 0) { tax = 14.00M; }
 
             var lines = new List<OrderLine>();
-            var total = 0.0M;
             var grandTotal = 0.0M;
             foreach (ListViewItem item in lvProducts.CheckedItems)
             {
                 var price = decimal.Parse(item.SubItems[1].Text);
                 var qty = int.Parse(item.SubItems[2].Text);
-                total = (price * qty);
+                decimal total = (price * qty);
                 lines.Add(new OrderLine
                 {
                     Price = price,

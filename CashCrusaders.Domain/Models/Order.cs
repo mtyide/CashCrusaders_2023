@@ -16,10 +16,10 @@ namespace CashCrusaders.Domain.Models
         public decimal GrandTotal { get; set; }
         [Required]
         [StringLength(20)]
-        public string Code { get; set; }
+        public string SupplierCode { get; set; }
         [Required]
         [StringLength(50)]
-        public string Name { get; set; }
+        public string SupplierName { get; set; }
         public List<OrderLine> Lines { get; set; }
     }
 }

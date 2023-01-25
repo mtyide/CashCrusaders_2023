@@ -26,3 +26,5 @@ Image 1: Loading Suppliers from DB into a Dropdown -> https://github.com/mtyide/
 Image 2: Displaying Products for a specific Supplier in a ListView -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment_1.png  
 # Status
 Assessment In Progress -> Target: 26/27 January 2023 (Completion)
+# Copyright
+Copyright 2023. Yandisa Mtyide 2023 VS Projects

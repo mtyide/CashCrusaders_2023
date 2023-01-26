@@ -1,4 +1,6 @@
 # CashCrusaders Windows Forms Assessment
+Completed: 25 January 2023, 15.30 CAT +02.00  
+Started: 24 January 2023 17.15 CAT +02.00  
 Type: .NET Core Windows Forms App  
 Using EntityFrameworkCore  
 Using Dependency Injection  
@@ -8,9 +10,10 @@ Database Schema: CashCrusaders.Data project under Database folder
 Step-by-steb Guide -> https://drive.google.com/file/d/1EycqLzbd2x9e31WoNy984QX0Fyzyo97a/view?usp=share_link  
 Dependency Injection: See topics below  
 # Requirements
-.NET Core 6.0
-SQL Server 20**  
-Visual Studio 20**  
+.NET Core 6.0  
+C# 6.0  
+SQL Server 2019 or latest  
+Visual Studio 2019 or latest  
 # Project Structure
 CashCrusaders.App -> Windows Forms Application  
 CashCrusaders.Domain -> Models, Interfaces and Services  
@@ -27,9 +30,10 @@ Please see Program.cs & Main.cs file => CashCrusaders.App project
 Image 1: Loading Suppliers from DB into a Dropdown -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment.png  
 Image 2: Displaying Products for a specific Supplier in a ListView -> https://github.com/mtyide/CashCrusaders_2023/blob/master/CashCrusadersAssessment_1.png  
 Image 3: Create Order for specific product(s) -> https://github.com/mtyide/CashCrusaders_2023/blob/master/createOrders.png  
+For more screenshots, please see Step-by-step Guide  
 # Status
 Purchase Order Application -> Target: 26/27 January 2023 => 100% completed. See Step-by-step guide documentation (top)  
 Testing & Debugging Orders, Suppliers and Products creation => 0% remaining  
-Refactor Problem 2 Logic => 2% remaining
+Refactor/Review Problem 2 Logic => 100% completed
 # Copyright
 Author: Yandisa Mtyide. 2023 VS Projects

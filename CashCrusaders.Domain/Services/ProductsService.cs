@@ -6,9 +6,9 @@ namespace CashCrusaders.Domain.Services
     public class ProductsService : IProductsService
     {
         private readonly IProductsRepository _productsRepository;
-        public ProductsService(IProductsRepository productsService) 
+        public ProductsService(IProductsRepository productsRepository) 
         {
-            _productsRepository = productsService;
+            _productsRepository = productsRepository;
         }
 
         public Task<List<Product>> GetAll()

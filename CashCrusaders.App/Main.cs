@@ -11,6 +11,7 @@ namespace CashCrusaders.App
         private readonly IProductsService _productsService;
         private readonly IOrdersService _ordersService;
         private bool isLoading = true;
+        private bool isNewSupplier = false;
         public Main(ISuppliersService suppliersService, IProductsService productsService, IOrdersService ordersService)
         {
             InitializeComponent();
@@ -31,9 +32,13 @@ namespace CashCrusaders.App
             cbSupplierList.DisplayMember = "SupplierName";
             cbSupplierList.SelectedIndex = 0;
             cbSupplierList.ValueMember = "Id";
+
             if (list.Count > 0) { bViewOrders.Enabled = true; }
-            isLoading = false;
-            await LoadProductsBySelectedSupplier();
+            if (!isNewSupplier)
+            {
+                isLoading = false;
+                await LoadProductsBySelectedSupplier();
+            }
         }
 
         private static int DoProductsSort(Product x, Product y)
@@ -117,6 +122,7 @@ namespace CashCrusaders.App
             Application.DoEvents();
 
             Cursor = Cursors.WaitCursor;
+            isNewSupplier = false;
             var supplier = new CaptureSupplier(_suppliersService)
             {
                 StartPosition = FormStartPosition.CenterScreen
@@ -129,6 +135,7 @@ namespace CashCrusaders.App
 
         private void Supplier_SupplierCreated(object sender, EventArgs e)
         {
+            isNewSupplier = true;
             LoadSuppliers();
         }
 
@@ -223,13 +230,14 @@ namespace CashCrusaders.App
                 grandTotal += total + (decimal.Divide(tax, 100) * total);
                 total = 0.0M;
             }
-            
+
             var number = string.Format("ORD-{0}", Guid.NewGuid().ToString().ToUpperInvariant().Split('-')[0][..3]);
             var id = (int)cbSupplierList.SelectedValue;
             var supplier = await _suppliersService.GetById(id);
 
             if (supplier != null)
             {
+                grandTotal = Math.Round(grandTotal, 2);
                 var order = new Order
                 {
                     Date = DateTime.UtcNow,

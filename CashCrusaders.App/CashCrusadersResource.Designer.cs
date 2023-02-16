@@ -70,7 +70,7 @@ namespace CashCrusaders.App {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 14.00.
+        ///   Looks up a localized string similar to 14,00.
         /// </summary>
         internal static string tax {
             get {

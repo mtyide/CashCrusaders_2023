@@ -20,8 +20,8 @@
 
             if (qty > 0)
             {
-                QtyUpdated?.Invoke(qty, EventArgs.Empty);
                 Close();
+                QtyUpdated?.Invoke(qty, EventArgs.Empty);
                 Dispose();
             }
             else

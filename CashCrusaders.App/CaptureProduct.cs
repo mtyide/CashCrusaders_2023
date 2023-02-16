@@ -22,7 +22,7 @@ namespace CashCrusaders.App
         private async void bSave_Click(object sender, EventArgs e)
         {
             #region Validation
-            var res = decimal.TryParse(tbQty.Text, out decimal productPrice);
+            var res = decimal.TryParse(tbPrice.Text, out decimal productPrice);
             if (res == false)
             {
                 MessageBox.Show("Please enter a valid price","Prompt", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -60,8 +60,8 @@ namespace CashCrusaders.App
                 var button = MessageBox.Show("Product has been successfully added", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (button == DialogResult.OK)
                 {
-                    ProductCreated?.Invoke(result, EventArgs.Empty);
                     Close();
+                    ProductCreated?.Invoke(result, EventArgs.Empty);
                     Dispose();
                 }
             }

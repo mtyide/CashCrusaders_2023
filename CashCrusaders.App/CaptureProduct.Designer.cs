@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CaptureProduct));
             this.gbCaptureProduct = new System.Windows.Forms.GroupBox();
-            this.tbQty = new System.Windows.Forms.TextBox();
-            this.lQty = new System.Windows.Forms.Label();
+            this.tbPrice = new System.Windows.Forms.TextBox();
+            this.lPrice = new System.Windows.Forms.Label();
             this.lProductCodeDesc = new System.Windows.Forms.Label();
             this.lProductCode = new System.Windows.Forms.Label();
             this.lDescription = new System.Windows.Forms.Label();
@@ -42,8 +42,8 @@
             // 
             // gbCaptureProduct
             // 
-            this.gbCaptureProduct.Controls.Add(this.tbQty);
-            this.gbCaptureProduct.Controls.Add(this.lQty);
+            this.gbCaptureProduct.Controls.Add(this.tbPrice);
+            this.gbCaptureProduct.Controls.Add(this.lPrice);
             this.gbCaptureProduct.Controls.Add(this.lProductCodeDesc);
             this.gbCaptureProduct.Controls.Add(this.lProductCode);
             this.gbCaptureProduct.Controls.Add(this.lDescription);
@@ -56,22 +56,22 @@
             this.gbCaptureProduct.TabStop = false;
             this.gbCaptureProduct.Text = "Capture | Save Product";
             // 
-            // tbQty
+            // tbPrice
             // 
-            this.tbQty.Location = new System.Drawing.Point(174, 229);
-            this.tbQty.Name = "tbQty";
-            this.tbQty.Size = new System.Drawing.Size(85, 27);
-            this.tbQty.TabIndex = 3;
-            this.tbQty.Text = "0,00";
+            this.tbPrice.Location = new System.Drawing.Point(174, 229);
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.Size = new System.Drawing.Size(85, 27);
+            this.tbPrice.TabIndex = 3;
+            this.tbPrice.Text = "0,00";
             // 
-            // lQty
+            // lPrice
             // 
-            this.lQty.AutoSize = true;
-            this.lQty.Location = new System.Drawing.Point(16, 233);
-            this.lQty.Name = "lQty";
-            this.lQty.Size = new System.Drawing.Size(35, 20);
-            this.lQty.TabIndex = 5;
-            this.lQty.Text = "Qty:";
+            this.lPrice.AutoSize = true;
+            this.lPrice.Location = new System.Drawing.Point(16, 233);
+            this.lPrice.Name = "lPrice";
+            this.lPrice.Size = new System.Drawing.Size(44, 20);
+            this.lPrice.TabIndex = 5;
+            this.lPrice.Text = "Price:";
             // 
             // lProductCodeDesc
             // 
@@ -147,7 +147,7 @@
         private Button bSave;
         private Label lProductCode;
         private Label lProductCodeDesc;
-        private TextBox tbQty;
-        private Label lQty;
+        private TextBox tbPrice;
+        private Label lPrice;
     }
 }

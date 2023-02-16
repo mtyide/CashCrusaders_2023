@@ -121,6 +121,6 @@
     <value>Server=.;Database=cashcrusaders;Trusted_Connection=SSPI;Encrypt=false;TrustServerCertificate=true</value>
   </data>
   <data name="tax" xml:space="preserve">
-    <value>14.00</value>
+    <value>14,00</value>
   </data>
 </root>
